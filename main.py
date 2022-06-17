@@ -14,6 +14,8 @@ klines = client.get_historical_klines("BTCBUSD", Client.KLINE_INTERVAL_1MINUTE, 
 
 df = pd.DataFrame(klines)
 
+df.drop(df.columns[5:12], axis=1, inplace=True) # Remove unused collumns 5 to 11
+
 
 for i in range(len(df[0])):             
     df[0][i] = datetime.utcfromtimestamp(df[0][i]//1000) # Divide by thousand because binance delivers unix timestamps with three extra integers
