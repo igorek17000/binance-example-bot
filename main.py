@@ -51,18 +51,21 @@ fig = go.Figure(data=[
                 line=dict(width=1)),
     
     ##CODE NOT OPTIMISED!
-      go.Line(
-            x=df[0],
-            y=df['bb_bbm'],
+    
+    
+      go.Line(              #
+            x=df[0],        # zet de x as van die lijn gelijk met de date
+            y=df['bb_bbm'], # plot middelste bb lijn
+
        ), 
-      go.Line(
-            x=df[0],
-            y=df['bb_bbh'],
+      go.Line(              #
+            x=df[0],        # zet de x as van die lijn gelijk met de date
+            y=df['bb_bbh'], # plot bovenste bb lijn
        ), 
-            go.Line(
-            x=df[0],
-            y=df['bb_bbl'],
-       )
-                      ])
+            go.Line(        # 
+            x=df[0],        # zet de x as van die lijn gelijk met de date
+            y=df['bb_bbl'], # plot onderste bb lijn
+       )            
+])
 
 fig.show()
