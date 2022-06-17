@@ -29,7 +29,7 @@ df.drop(df.columns[5:12], axis=1, inplace=True) # Verwijder ongebruikte kollomme
 
 
 for i in range(len(df[0])):             
-    df.iloc[i][0] = datetime.utcfromtimestamp(df.iloc[i][0]//1000) # Delen door duizend omdat binance de unix-timestamps met drie extra integers stuurt, waarom binance... 😕 ?
+    df[0][i] = datetime.utcfromtimestamp(df[0][i]//1000) # Delen door duizend omdat binance de unix-timestamps met drie extra integers stuurt, waarom binance... 😕 ?
     
 
 indicator_bb = BollingerBands(close=df[4], window=20, window_dev=2)
