@@ -47,8 +47,7 @@ fig = go.Figure(data=[
                 open=df[1],
                 high=df[2],
                 low=df[3],
-                close=df[4],
-                line=dict(width=1)),
+                close=df[4]),
     
     ##CODE NOT OPTIMISED!
     
