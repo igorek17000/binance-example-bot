@@ -1,8 +1,8 @@
+# IMPORTS
 from secret import API_KEY, API_SECRET
 from binance.client import Client
 import pandas as pd
 from ta.volatility import BollingerBands
-from ta.utils import dropna
 import plotly.graph_objects as go
 from datetime import datetime
 
